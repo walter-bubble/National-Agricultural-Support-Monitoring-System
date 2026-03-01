@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – register/register.js
-   Multi-step form with per-step validation
-   ═══════════════════════════════════════════════════════════ */
-
 document.addEventListener('DOMContentLoaded', () => {
   renderNav('register');
   renderFooter();

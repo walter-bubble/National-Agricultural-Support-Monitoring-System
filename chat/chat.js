@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – chat/chat.js
-   Smart support bot with keyword matching
-   ═══════════════════════════════════════════════════════════ */
-
 const BOT_RESPONSES = [
   {
     keywords: ['register','registration','sign up','new farmer'],

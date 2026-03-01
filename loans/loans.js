@@ -1,6 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – loans/loans.js
-   ═══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   renderNav('loans');
   renderFooter();

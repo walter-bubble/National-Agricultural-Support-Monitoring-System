@@ -1,6 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – weather/weather.js
-   ═══════════════════════════════════════════════════════════ */
 const WEATHER = {
   muranga:  { loc:"Murang'a County", temp:'24°C', desc:'Partly Cloudy with Morning Showers',  humidity:'72%', wind:'12 km/h', rain:'60%', uv:'4', icon:'⛅', gradient:'135deg,#1a3a5c,#2d6a9a,#4a9a7a', advisory:'⚠️ <strong>High rainfall expected Fri–Sat.</strong> Avoid applying fertilizer before rains. Excellent planting window on Sunday–Monday as soil moisture will be optimal.' },
   nakuru:   { loc:'Nakuru County',   temp:'22°C', desc:'Clear with Light Breeze',              humidity:'58%', wind:'18 km/h', rain:'20%', uv:'6', icon:'🌤', gradient:'135deg,#2d5a1a,#4a9a3a,#7aba60', advisory:'✅ <strong>Good conditions for land preparation.</strong> Low rainfall forecast. Ideal week for herbicide application and open-field spraying.' },

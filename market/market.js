@@ -1,6 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – market/market.js
-   ═══════════════════════════════════════════════════════════ */
 const BUYERS = [
   { name:'Naivas Supermarket Ltd.', location:'Nairobi, Kiambu', crops:['Tomatoes','Kales','Potatoes'], price:'KES 65/kg (tomatoes)', color:'linear-gradient(135deg,#2d7a4f,#4caf72)', icon:'🏪' },
   { name:'Unga Group PLC', location:'Nairobi (Countrywide)', crops:['Maize','Wheat','Sorghum'], price:'KES 3,800/bag (maize)', color:'linear-gradient(135deg,#8b5e3c,#d4a96a)', icon:'🌽' },

@@ -1,9 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – shared/footer.js
-   Renders the consistent footer into #footer-container.
-   Call renderFooter() on every page.
-   ═══════════════════════════════════════════════════════════ */
-
 function renderFooter() {
   const html = `
     <footer>

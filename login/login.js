@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – login/login.js
-   Form validation, password toggle, submit handler
-   ═══════════════════════════════════════════════════════════ */
-
 document.addEventListener('DOMContentLoaded', () => {
   renderNav('login');
   renderFooter();

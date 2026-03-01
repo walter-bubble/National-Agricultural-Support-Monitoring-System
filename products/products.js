@@ -1,7 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – products/products.js
-   ═══════════════════════════════════════════════════════════ */
-
 const PRODUCTS = [
   { id:1, icon:'🌽', name:'Certified Maize Seed (DH04)', category:'seed', cat:'Seeds', desc:'High-yield drought-tolerant variety. 10 kg bag, treated for storage pests.', avail:'in' },
   { id:2, icon:'🧴', name:'DAP Fertilizer 50 kg', category:'fertilizer', cat:'Fertilizer', desc:'Di-Ammonium Phosphate. Government-subsidised at 40% off market price.', avail:'in' },

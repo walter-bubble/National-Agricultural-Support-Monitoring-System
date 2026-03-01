@@ -1,9 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   NASMS – shared/nav.js
-   Renders the navigation bar and handles mobile toggle.
-   Each page calls: renderNav('pageName')
-   ═══════════════════════════════════════════════════════════ */
-
 const NAV_LINKS = [
   { id: 'home',      label: '🏠 Home',             href: '../home/index.html' },
   { id: 'register',  label: '📝 Register',          href: '../register/index.html' },
