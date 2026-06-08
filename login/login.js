@@ -1,4 +1,3 @@
-// login.js
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('loginForm').addEventListener('submit', handleLogin);
 });
@@ -6,23 +5,33 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleLogin(e) {
   e.preventDefault();
 
-  const userName = document.getElementById('userName').value.trim();
+  const emailAddress = document.getElementById('userName').value.trim(); // renamed logically
   const password = document.getElementById('password').value;
 
-  fetch('http://localhost:8080/api/auth/login', {
+  fetch('http://localhost:8080/api/auth/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userName, password })
+    body: JSON.stringify({ emailAddress, password })
   })
-    .then(res => res.json())
-    .then(data => {
-      // Assume backend returns { id: 1, token: "...", userName: "...", role: "FARMER" }
-      localStorage.setItem('farmerId', data.id);
-      localStorage.setItem('userName', data.userName);
+    .then(async res => {
+      if (!res.ok) {
+        const errText = await res.text();
+        throw new Error(errText || 'Login failed');
+      }
+      return res.text(); // ✅ backend returns token (String)
+    })
+    .then(token => {
+      // Save token
+      localStorage.setItem('token', token);
+
+      // Optional: store email
+      localStorage.setItem('emailAddress', emailAddress);
+
+      // Redirect
       window.location.href = '../loans/index.html';
     })
     .catch(err => {
       console.error(err);
-      alert('Login failed. Check your username and password.');
+      alert('Login failed: ' + err.message);
     });
 }

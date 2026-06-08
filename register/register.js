@@ -1,4 +1,3 @@
-// ─── register.js ───
 document.addEventListener('DOMContentLoaded', () => {
   renderNav('register');
   renderFooter();
@@ -90,7 +89,7 @@ function validateStep(step) {
   return valid;
 }
 
-// ─── Utility: Check Required ───
+// ─── Utility ───
 function checkRequired(id, pattern, msg) {
   const input = document.getElementById(id);
   const val = input.value.trim();
@@ -124,7 +123,7 @@ function updateStrength() {
   meter.className = 'pwd-strength ' + (score <= 1 ? 'weak' : score === 2 ? 'fair' : 'strong');
 }
 
-// ─── Password Toggle ───
+// ─── Toggle Password ───
 function toggleRegPwd(inputId, iconId) {
   const input = document.getElementById(inputId);
   const icon = document.getElementById(iconId);
@@ -133,7 +132,7 @@ function toggleRegPwd(inputId, iconId) {
   icon.className = isHidden ? 'fa fa-eye-slash' : 'fa fa-eye';
 }
 
-// ─── Final Submit ───
+// ─── FINAL SUBMIT ───
 function handleSubmit(e) {
   e.preventDefault();
   if (!validateStep(3)) return;
@@ -143,13 +142,15 @@ function handleSubmit(e) {
   btn.style.opacity = '.7';
   btn.style.pointerEvents = 'none';
 
-  // Map frontend fields to backend
+  // ✅ IMPORTANT: Matches backend User entity
   const userData = {
-    userName: document.getElementById('fullName').value.trim(),
+    firstName: document.getElementById('fullName').value.trim(),
+    emailAddress: document.getElementById('email').value.trim(),
     password: document.getElementById('regPassword').value,
-    role: "farmer" // default
+    role: "FARMER"
   };
 
+  // ✅ Correct backend endpoint
   fetch('http://localhost:8080/api/auth/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -161,8 +162,8 @@ function handleSubmit(e) {
     })
     .then(data => {
       console.log('Registered user:', data);
-      alert('✅ Registration successful! Redirecting to dashboard...');
-      window.location.href = '../dashboard/index.html';
+      alert('✅ Registration successful! Redirecting to login...');
+      window.location.href = '../login/index.html';
     })
     .catch(err => {
       console.error(err);
